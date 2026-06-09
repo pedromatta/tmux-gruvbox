@@ -33,8 +33,8 @@ theme_set_dark() {
   tmux_append_setwo "window-status-current-style" "bg=${_active_window_title_bg},fg=${col_bg1}" # TODO cosider removing red!
 
   # pane border
-  tmux_append_seto "pane-active-border-style" "fg=default"
-  tmux_append_seto "pane-border-style" "fg=default"
+  # tmux_append_seto "pane-active-border-style" "fg=${col_fg2}"
+  # tmux_append_seto "pane-border-style" "fg=${col_bg1}"
 
   # message infos
   tmux_append_seto "message-style" "bg=${col_bg2},fg=${col_fg1}"
