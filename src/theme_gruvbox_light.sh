@@ -60,7 +60,14 @@ theme_set_light() {
   tmux_append_seto "status-right-length" "80"
   tmux_append_setwo "window-status-separator" ""
 
-  tmux_append_seto "status-left" "#[bg=${col_bg3},fg=${col_fg3}] ${_left_status_a} #[bg=${col_bg1},fg=${col_bg3},nobold,noitalics,nounderscore]"
+  local _prefix_bg _prefix_fg
+  _prefix_bg=$(tmux_get_option "@tmux-gruvbox-prefix-bg" "${col_orange2}")
+  _prefix_fg=$(tmux_get_option "@tmux-gruvbox-prefix-fg" "${col_bg0}")
+
+  local _status_left_bg=${col_bg1}
+  if [[ "$_statusbar_alpha" == "true" ]]; then _status_left_bg="default"; fi
+
+  tmux_append_seto "status-left" "#[bg=#{?client_prefix,${_prefix_bg},${col_bg3}},fg=#{?client_prefix,${_prefix_fg},${col_fg3}}] ${_left_status_a} #[bg=${_status_left_bg},fg=#{?client_prefix,${_prefix_bg},${col_bg3}},nobold,noitalics,nounderscore]"
 
   # right status
   local _status_right_bg=${col_bg1}

@@ -32,7 +32,7 @@ EOF
   tmux new -d
 
   # check if left side match
-  _status_left_expected="#[bg=#665c54,fg=#bdae93] #S #[bg=#3c3836,fg=#665c54,nobold,noitalics,nounderscore]"
+  _status_left_expected="#[bg=#{?client_prefix,#fe8019,#665c54},fg=#{?client_prefix,#282828,#bdae93}] #S #[bg=#3c3836,fg=#{?client_prefix,#fe8019,#665c54},nobold,noitalics,nounderscore]"
   _status_left_current=$(helper_tmux_get_statusleft)
   if [[ "$_status_left_current" != "$_status_left_expected" ]]; then
     helper_print_fail "status-left did not match" "$_status_left_current" "$_status_left_expected"
