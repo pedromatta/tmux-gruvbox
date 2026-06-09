@@ -79,7 +79,7 @@ set -g @tmux-gruvbox-left-status-a '#S' # tmux's session name
 
 When you press the tmux prefix key, the session block (Left Status A) and its divider dynamically change to a highlight color.
 
-By default, this highlight uses the theme's green color. You can customize the background and foreground colors for the prefix active state by setting:
+By default, this highlight uses the theme's blue color. You can customize the background and foreground colors for the prefix active state by setting:
 
 ```bash
 # Set custom background color when prefix is active (e.g. orange)

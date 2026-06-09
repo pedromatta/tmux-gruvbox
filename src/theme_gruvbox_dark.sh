@@ -61,8 +61,8 @@ theme_set_dark() {
   tmux_append_setwo "window-status-separator" ""
 
   local _prefix_bg _prefix_fg
-  _prefix_bg=$(tmux_get_option "@tmux-gruvbox-prefix-bg" "${col_green}")
-  _prefix_fg=$(tmux_get_option "@tmux-gruvbox-prefix-fg" "${col_bg0}")
+  _prefix_bg=$(tmux_get_option "@tmux-gruvbox-prefix-bg" "${col_blue}")
+  _prefix_fg=$(tmux_get_option "@tmux-gruvbox-prefix-fg" "${col_fg0}")
 
   local _status_left_bg=${col_bg1}
   if [[ "$_statusbar_alpha" == "true" ]]; then _status_left_bg="default"; fi
