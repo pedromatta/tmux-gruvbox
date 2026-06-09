@@ -5,7 +5,7 @@ This is a personal fork of [egel/tmux-gruvbox](https://github.com/egel/tmux-gruv
 
 ## Installation
 
-### Install via [TPM][github-tpm] (recommended)
+### Install via [TPM](github.com/tmux-plugins/tpm) (recommended)
 
 Add plugin at the top list of TPM plugins list in `.tmux.conf` and select desired theme.
 
