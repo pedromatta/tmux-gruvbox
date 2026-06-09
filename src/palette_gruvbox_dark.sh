@@ -4,16 +4,8 @@
 # gruvbox dark pallete
 ##########################
 
-####
-# When using 'colour124' you are using the color default in terminal pallete.
-# This could be important for people which terminals support only 256 colors
-# and does not support HEX values.
-#
-# The names of colors used from https://github.com/morhetz/gruvbox
-
-# shellcheck disable=2034 # ignored as this file only contains var definitions
 col_bg="#282828"
-col_bg0_h="#1d2021"
+col_bg0_h="#32302f"
 col_bg0="#282828"
 col_bg1="#3c3836"
 col_bg2="#504945"
