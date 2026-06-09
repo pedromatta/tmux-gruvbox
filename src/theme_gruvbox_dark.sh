@@ -20,7 +20,7 @@ theme_set_dark() {
   tmux_append_seto "status-style" "bg=${_statusbar_bg},fg=${col_fg1}"
 
   # default window title colors
-  local _window_title_bg=${col_green2}
+  local _window_title_bg=${col_fg3}
   if [[ "$_statusbar_alpha" == "true" ]]; then _window_title_bg="default"; fi
   tmux_append_setwo "window-status-style" "bg=${_window_title_bg},fg=${col_bg1}"
 
@@ -28,7 +28,7 @@ theme_set_dark() {
   tmux_append_setwo "window-status-activity-style" "bg=${col_bg1},fg=${col_fg3}"
 
   # active window title colors
-  local _active_window_title_bg=${col_green2}
+  local _active_window_title_bg=${col_fg3}
   if [[ "$_statusbar_alpha" == "true" ]]; then _active_window_title_bg="default"; fi
   tmux_append_setwo "window-status-current-style" "bg=${_active_window_title_bg},fg=${col_bg1}" # TODO cosider removing red!
 
@@ -70,7 +70,7 @@ theme_set_dark() {
   # current window
   local _current_window_status_format_bg=${col_bg1}
   if [[ "$_statusbar_alpha" == "true" ]]; then _current_window_status_format_bg="default"; fi
-  tmux_append_setwo "window-status-current-format" "#[bg=${col_green2},fg=${col_bg1},nobold,noitalics,nounderscore]#[bg=${col_green2},fg=${col_bg2}] #I #[bg=${col_green2},fg=${col_bg2},bold] #W#{?window_zoomed_flag,*Z,} #{?window_end_flag,#[bg=${_current_window_status_format_bg}],#[bg=${col_bg1}]}#[fg=${col_green2},nobold,noitalics,nounderscore]"
+  tmux_append_setwo "window-status-current-format" "#[bg=${col_fg3},fg=${col_bg1},nobold,noitalics,nounderscore]#[bg=${col_fg3},fg=${col_bg2}] #I #[bg=${col_fg3},fg=${col_bg2},bold] #W#{?window_zoomed_flag,*Z,} #{?window_end_flag,#[bg=${_current_window_status_format_bg}],#[bg=${col_bg1}]}#[fg=${col_fg3},nobold,noitalics,nounderscore]"
 
   # default window
   local _default_window_status_format_bg=${col_bg1}
