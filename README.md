@@ -2,6 +2,7 @@
 
 This is a personal fork of [egel/tmux-gruvbox](https://github.com/egel/tmux-gruvbox) theme, customized to fit my personal preferences and terminal setup.
 
+I've changed the default colors of the line sections and the display behaviour of the active window. I've also added a prefix highlight function, making the session section of the line change colors to show when the prefix is on.
 
 ## Installation
 
@@ -72,6 +73,20 @@ set -g @tmux-gruvbox-statusbar-alpha 'true'
 
 ```bash
 set -g @tmux-gruvbox-left-status-a '#S' # tmux's session name
+```
+
+### Prefix Highlight
+
+When you press the tmux prefix key, the session block (Left Status A) and its divider dynamically change to a highlight color.
+
+By default, this highlight uses the theme's green color. You can customize the background and foreground colors for the prefix active state by setting:
+
+```bash
+# Set custom background color when prefix is active (e.g. orange)
+set -g @tmux-gruvbox-prefix-bg '#fe8019'
+
+# Set custom foreground color when prefix is active (e.g. dark grey)
+set -g @tmux-gruvbox-prefix-fg '#282828'
 ```
 
 ### Right Status (Section X)
