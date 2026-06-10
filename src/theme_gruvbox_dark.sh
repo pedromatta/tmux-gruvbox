@@ -81,7 +81,7 @@ theme_set_dark() {
 
   local _current_window_status_format_bg=${col_bg1}
   if [[ "$_statusbar_alpha" == "true" ]]; then _current_window_status_format_bg="default"; fi
-  tmux_append_setwo "window-status-current-format" "#[bg=${col_fg3},fg=${col_bg1},nobold,noitalics,nounderscore] #I#{?window_zoomed_flag,Z,} #{?window_end_flag,#[bg=${_current_window_status_format_bg}],#[bg=${col_bg1}]}#[fg=${col_fg3},nobold,noitalics,nounderscore]"
+  tmux_append_setwo "window-status-current-format" "#[bg=${col_fg3},fg=${col_bg1},nobold,noitalics,nounderscore] #W#{?window_zoomed_flag,Z,} #{?window_end_flag,#[bg=${_current_window_status_format_bg}],#[bg=${col_bg1}]}#[fg=${col_fg3},nobold,noitalics,nounderscore]"
 
   # default window
   local _default_window_status_format_bg=${col_bg1}
